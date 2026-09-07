@@ -321,7 +321,7 @@
       "path": "c:/Users/rayay/AppData/Roaming/Antigravity IDE/User/settings.json",
       "priority": "medium",
       "summary": "    \"python.languageServer\": \"Default\"\r",
-      "lastAnalyzed": "2026-09-07T20:56:06.651Z",
+      "lastAnalyzed": "2026-09-07T22:13:33.342Z",
       "hash": "927e30f8b91e4f123de2d20c7107dae9af9bdadd3dcd107d3d96c1017e0d0442",
       "size": 44,
       "language": "JSON"
@@ -347,7 +347,7 @@
   "rules": [],
   "developerNotes": [],
   "meta": {
-    "lastUpdated": "2026-09-07T20:56:06.651Z",
+    "lastUpdated": "2026-09-07T22:13:33.342Z",
     "version": "1.0.0",
     "workspaceRoot": "d:\\Ayush Portfolio",
     "tokenEstimate": {
