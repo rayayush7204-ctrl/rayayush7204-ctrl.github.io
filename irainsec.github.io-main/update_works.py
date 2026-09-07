@@ -1,0 +1,283 @@
+import re
+
+def update_works():
+    file_path = "D:/Ayush Portfolio/irainsec.github.io-main/works.html"
+    with open(file_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    new_css = """
+    <style>
+    /* New Project Presentation Styles */
+    .proj-card {
+        background: var(--card-dark);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 30px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .proj-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 179, 255, 0.15);
+        border-color: rgba(0, 179, 255, 0.3);
+    }
+    @media (min-width: 992px) {
+        .proj-card {
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+        }
+        .proj-card.reverse {
+            flex-direction: row-reverse;
+        }
+        .proj-content {
+            flex: 1;
+        }
+        .proj-image-wrapper {
+            flex: 1;
+            max-width: 500px;
+        }
+    }
+    .proj-year {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--neon-purple);
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+    .proj-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--text-light);
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+    .proj-cat {
+        font-size: 14px;
+        color: var(--neon-blue);
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    .proj-desc {
+        color: var(--text-muted);
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 24px;
+    }
+    .proj-desc strong {
+        color: var(--text-light);
+    }
+    .proj-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+    .tech-pill {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-light);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        transition: all 0.2s ease;
+    }
+    .tech-pill:hover {
+        background: rgba(0, 179, 255, 0.1);
+        border-color: var(--neon-blue);
+        color: var(--neon-blue);
+    }
+    .proj-actions {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .proj-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: var(--neon-blue);
+        color: #000;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .proj-btn:hover {
+        background: #0099db;
+        color: #000;
+        box-shadow: 0 0 15px rgba(0, 179, 255, 0.5);
+    }
+    .proj-btn-outline {
+        background: transparent;
+        color: var(--text-light);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .proj-btn-outline:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-light);
+        border-color: var(--text-light);
+        box-shadow: none;
+    }
+    .proj-image-wrapper {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .proj-image-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+    .proj-card:hover .proj-image-wrapper img {
+        transform: scale(1.03);
+    }
+    .proj-workflow {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin: 20px 0;
+        padding: 15px;
+        background: rgba(0,0,0,0.2);
+        border-radius: 8px;
+        border: 1px dashed rgba(255,255,255,0.1);
+    }
+    .workflow-step {
+        font-size: 12px;
+        color: var(--neon-blue);
+        background: rgba(0, 179, 255, 0.05);
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+    .workflow-arrow {
+        color: var(--text-muted);
+        font-size: 12px;
+    }
+    </style>
+    """
+
+    new_projects_area = """<section class="projects-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="section-heading" data-aos="fade-up"><img src="images/extras/star-2.png" alt="Star">
+                            Featured Projects <img src="images/extras/star-2.png" alt="Star"></h1>
+
+                        <!-- PROJECT 1: Emergency Response -->
+                        <div class="proj-card" data-aos="fade-up">
+                            <div class="proj-content">
+                                <div class="proj-year">2026</div>
+                                <div class="proj-title">Emergency Response & Hospital Coordination Platform</div>
+                                <div class="proj-cat">IoT • Distributed Systems • Emergency Response</div>
+                                
+                                <div class="proj-desc">
+                                    <strong>WHAT I BUILT</strong><br>
+                                    An IoT accident-detection system using Arduino/Raspberry Pi airbag-crash sensors that streams sensor data to the backend through MQTT/HTTP.<br><br>
+                                    
+                                    <strong>KEY TECHNICAL IMPLEMENTATION</strong><br>
+                                    Designed a fault-tolerant hospital coordination backend using FastAPI, PostgreSQL/PostGIS for geospatial queries, and WebSockets/Firebase for real-time synchronization. Implemented object-oriented design and modular architecture across 20+ decoupled API endpoints, validated with comprehensive pytest integration testing.<br><br>
+                                    
+                                    <strong>IMPORTANT RESULT</strong><br>
+                                    The system achieved zero incorrect routing in failure simulations, utilizing PostgreSQL/PostGIS indexing to optimize geospatial query performance.
+                                </div>
+                                
+                                <div class="proj-tech">
+                                    <span class="tech-pill">FastAPI</span>
+                                    <span class="tech-pill">PostgreSQL / PostGIS</span>
+                                    <span class="tech-pill">Redis</span>
+                                    <span class="tech-pill">WebSockets</span>
+                                    <span class="tech-pill">Firebase</span>
+                                    <span class="tech-pill">Arduino / Raspberry Pi</span>
+                                    <span class="tech-pill">MQTT</span>
+                                    <span class="tech-pill">pytest</span>
+                                </div>
+                                
+                                <div class="proj-actions">
+                                    <a href="https://github.com/rayayush7204-ctrl" target="_blank" class="proj-btn proj-btn-outline">
+                                        <i class="iconoir-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="proj-image-wrapper">
+                                <img src="images/extras/project-1.png" alt="Emergency Response">
+                            </div>
+                        </div>
+
+                        <!-- PROJECT 2: LifePulse AI -->
+                        <div class="proj-card reverse" data-aos="fade-up">
+                            <div class="proj-content">
+                                <div class="proj-year">2026</div>
+                                <div class="proj-title">LifePulse AI – Smart Blood Donation Network</div>
+                                <div class="proj-cat">Emergency Healthcare • Full-Stack • Intelligent Donor Matching</div>
+                                
+                                <div class="proj-desc">
+                                    <strong>WHAT IT DOES</strong><br>
+                                    Built and deployed a full-stack emergency blood donation platform that matches eligible nearby donors with urgent requests using blood-group compatibility, donor eligibility, availability, geographic proximity, and ring-based escalation.<br><br>
+                                    
+                                    <strong>KEY TECHNICAL IMPLEMENTATION</strong><br>
+                                    Implemented real-time emergency notifications via Firebase, live GPS donor tracking using Browser Geolocation API and WebSockets, road-based ETA via OSRM, and end-to-end donation lifecycle management. Enforces a strict 56-day recovery period for donors using PostgreSQL/PostGIS.<br><br>
+                                    
+                                    <div class="proj-workflow">
+                                        <div class="workflow-step">Emergency Request</div><div class="workflow-arrow">→</div>
+                                        <div class="workflow-step">Eligible Donor Matching</div><div class="workflow-arrow">→</div>
+                                        <div class="workflow-step">Donor Dispatch</div><div class="workflow-arrow">→</div>
+                                        <div class="workflow-step">Donor Accepts</div><div class="workflow-arrow">→</div>
+                                        <div class="workflow-step">Live GPS Tracking</div><div class="workflow-arrow">→</div>
+                                        <div class="workflow-step">Arrival</div><div class="workflow-arrow">→</div>
+                                        <div class="workflow-step">Donation</div><div class="workflow-arrow">→</div>
+                                        <div class="workflow-step">Completion</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="proj-tech">
+                                    <span class="tech-pill">React</span>
+                                    <span class="tech-pill">FastAPI</span>
+                                    <span class="tech-pill">PostgreSQL / PostGIS</span>
+                                    <span class="tech-pill">Redis</span>
+                                    <span class="tech-pill">WebSockets</span>
+                                    <span class="tech-pill">Firebase</span>
+                                    <span class="tech-pill">OSRM</span>
+                                    <span class="tech-pill">Alembic</span>
+                                </div>
+                                
+                                <div class="proj-actions">
+                                    <a href="https://lifepulse-ai-by-ayush-ray.vercel.app" target="_blank" class="proj-btn">
+                                        <i class="iconoir-globe"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="proj-image-wrapper">
+                                <img src="images/projects/lifepulse/Screenshot_28-8-2026_205113_lifepulse-ai-by-ayush-ray.vercel.app.jpeg" alt="LifePulse AI">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>"""
+
+    # Insert CSS before closing head
+    if "<style>\n    /* New Project Presentation Styles */" not in content:
+        content = content.replace("</head>", new_css + "\n</head>")
+
+    # Replace old projects-area section
+    pattern = r'<section class="projects-area">.*?</section>\s*<section class="bottom-area">'
+    replacement = new_projects_area + '\n        <section class="bottom-area">'
+    content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(content)
+
+update_works()

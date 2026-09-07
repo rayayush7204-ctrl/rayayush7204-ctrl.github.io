@@ -1,0 +1,605 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Kumar Ray - Personal Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/iconoir.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <style>
+    /* --- Your Existing CSS (NOT modified or removed) --- */
+    :root {
+        --bg-dark: #0d0d0d;
+        --card-dark: #111;
+        --neon-blue: #00b3ff;
+        --neon-purple: #b400ff;
+        --text-light: #e6e6e6;
+        --text-muted: #999;
+        --glow: 0 0 15px rgba(0, 179, 255, 0.7);
+    }
+
+    .experience-section {
+        padding: 40px 0;
+        color: var(--text-light);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .experience-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: var(--neon-blue);
+        text-shadow: 0 0 8px var(--neon-blue), 0 0 20px var(--neon-purple);
+    }
+
+    .timeline {
+        position: relative;
+        margin-left: 20px;
+    }
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 18px;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(var(--neon-blue), var(--neon-purple));
+        box-shadow: var(--glow);
+    }
+
+    .exp-card {
+        position: relative;
+        background: var(--card-dark);
+        margin: 25px 0;
+        padding: 20px 25px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.05);
+        box-shadow: 0 0 12px rgba(0,0,0,0.4);
+        transition: 0.3s ease;
+    }
+
+    .exp-card::before {
+        content: "⬤";
+        position: absolute;
+        left: -32px;
+        top: 12px;
+        font-size: 18px;
+        color: var(--neon-blue);
+        text-shadow: var(--glow);
+    }
+
+    .exp-card:hover {
+        transform: translateX(8px);
+        box-shadow: 0 0 20px rgba(0, 179, 255, 0.4);
+        border-color: var(--neon-blue);
+    }
+
+    .exp-card h4 {
+        font-size: 0.95rem;
+        color: var(--neon-purple);
+        margin-bottom: 5px;
+        opacity: 0.9;
+    }
+    .exp-card h3 {
+        font-size: 1.35rem;
+        color: var(--neon-blue);
+        margin: 5px 0;
+        text-shadow: 0 0 6px var(--neon-blue);
+    }
+    .exp-card h5 {
+        font-size: 1rem;
+        color: var(--text-muted);
+        margin-bottom: 12px;
+    }
+
+    .exp-card p {
+        line-height: 1.6;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .badge-box {
+        margin-top: 10px;
+    }
+    .badge {
+        display: inline-block;
+        padding: 4px 10px;
+        background: rgba(0, 179, 255, 0.08);
+        border: 1px solid rgba(0, 179, 255, 0.4);
+        color: var(--neon-blue);
+        border-radius: 6px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        font-size: 0.75rem;
+        transition: 0.2s;
+    }
+    .badge:hover {
+        background: var(--neon-blue);
+        color: black;
+        box-shadow: var(--glow);
+    }
+
+    .icon {
+        margin-right: 6px;
+        font-size: 1.1rem;
+    }
+
+
+    /* ============================================================
+       --- NEW STYLES ADDED BELOW ---
+       (Education, Skills, Awards — Fully Compatible)
+       ============================================================ */
+
+
+    /* SECTION TITLES (Education/Skills/Awards) */
+    .neon-title {
+        font-size: 2.3rem;
+        margin: 40px 0 25px;
+        color: var(--neon-blue);
+        text-shadow: 0 0 10px var(--neon-blue), 0 0 25px var(--neon-purple);
+        font-weight: 600;
+    }
+
+    /* EDUCATION TIMELINE */
+    .edu-timeline {
+        position: relative;
+        margin-left: 20px;
+    }
+    .edu-timeline::before {
+        content: "";
+        position: absolute;
+        left: 18px;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(var(--neon-blue), var(--neon-purple));
+        box-shadow: var(--glow);
+    }
+
+    .edu-card {
+        position: relative;
+        background: var(--card-dark);
+        padding: 18px 22px;
+        margin: 22px 0;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.08);
+        transition: 0.3s ease;
+    }
+
+    .edu-card::before {
+        content: "⬤";
+        position: absolute;
+        left: -32px;
+        top: 8px;
+        color: var(--neon-blue);
+        font-size: 18px;
+        text-shadow: var(--glow);
+    }
+
+    .edu-card:hover {
+        transform: translateX(10px);
+        border-color: var(--neon-blue);
+        box-shadow: 0 0 20px rgba(0,179,255,0.5);
+    }
+
+    .edu-card h4 {
+        color: var(--neon-purple);
+        margin-bottom: 4px;
+        font-size: 1rem;
+    }
+    .edu-card h3 {
+        color: var(--neon-blue);
+        font-size: 1.2rem;
+        text-shadow: 0 0 5px var(--neon-blue);
+        margin-bottom: 4px;
+    }
+    .edu-card h5 {
+        color: var(--text-muted);
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    /* SKILLS GRID */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 22px;
+        margin-top: 20px;
+    }
+
+    .skill-box {
+        background: var(--card-dark);
+        padding: 18px;
+        text-align: center;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.08);
+        transition: 0.3s ease;
+    }
+    .skill-box:hover {
+        transform: translateY(-8px);
+        border-color: var(--neon-blue);
+        box-shadow: 0 0 20px rgba(0,179,255,0.4);
+    }
+
+    .skill-box .percent {
+        color: var(--neon-purple);
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .skill-box h3 {
+        font-size: 1rem;
+        color: var(--neon-blue);
+    }
+
+    /* AWARDS */
+    .awards-box {
+        background: var(--card-dark);
+        padding: 18px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.08);
+        transition: 0.3s ease;
+        margin-top: 15px;
+    }
+
+    .awards-box:hover {
+        transform: translateY(-6px);
+        border-color: var(--neon-purple);
+        box-shadow: 0 0 20px rgba(180,0,255,0.5);
+    }
+
+    .awards-box span {
+        color: var(--neon-purple);
+        font-size: 0.9rem;
+    }
+    .awards-box h3 {
+        color: var(--neon-blue);
+        font-size: 1.2rem;
+        margin-top: 4px;
+        margin-bottom: 8px;
+    }
+    .awards-box p {
+        color: var(--text-light);
+        opacity: 0.9;
+        line-height: 1.5;
+        font-size: 0.95rem;
+    }
+</style>
+    <main class="main-aboutpage">
+
+        <header class="header-area">
+            <div class="container">
+                <div class="gx-row d-flex align-items-center justify-content-between">
+                    <a href="./index.html" class="logo">
+                        <img src="images/extras/logo.png" alt="Logo">
+                    </a>
+
+                    <nav class="navbar">
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><a href="about.html">About</a></li>
+                            <li><a href="works.html">Projects</a></li>
+                            <li><a href="certifications.html">Certifications</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <a href="./contact.html" class="theme-btn">Let's talk</a>
+                    </nav>
+
+                    <a href="./contact.html" class="theme-btn">Let's talk</a>
+
+                    <div class="show-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="credential-area">
+            <div class="container">
+                <div class="gx-row d-flex">
+                    <div class="credential-sidebar-wrap" data-aos="zoom-in">
+                        <div class="credential-sidebar text-center">
+                            <div class="shadow-box">
+                                <img src="images/extras/bg1.png" alt="BG" class="bg-img">
+                                <div class="img-box">
+                                    <img src="images/extras/Ayush.png" alt="About Me">
+                                </div>
+                                <h2>Ayush Kumar Ray</h2>
+                                <p>@ayushkumarray</p>
+        
+                                <ul class="social-links d-flex justify-content-center">
+                                    <li><a href="mailto:rayayush7204@gmail.com" target="_blank">
+                                        <i class="iconoir-mail"></i>
+                                    </a></li>
+                                    <li><a href="https://www.linkedin.com/in/ayush-kumar-ray-990399219/" target="_blank">
+                                        <i class="iconoir-linkedin"></i>
+                                    </a></li>
+                                    <li><a href="https://lifepulse-ai-by-ayush-ray.vercel.app" target="_blank">
+                                        <i class="iconoir-globe"></i>
+                                    </a></li>
+                                    <li><a href="https://github.com/rayayush7204-ctrl" target="_blank">
+                                        <i class="iconoir-github"></i>
+                                    </a></li>
+            
+                                </ul>
+        
+                                <a href="./contact.html" class="theme-btn">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credential-content flex-1">
+                        <div class="credential-about" data-aos="zoom-in">
+                            <div style="max-width:1100px;margin:auto;">
+
+        <!-- Heading -->
+        <h2 style="
+            font-size:42px;
+            margin-bottom:15px;
+            color:#00eaff;
+            text-shadow:0 0 10px #00eaff;
+        ">
+            <i class="fas fa-user-shield" style="margin-right:10px;"></i>
+            About Me
+        </h2>
+
+        <!-- Narrative Paragraph -->
+        <p style="line-height:1.8; font-size:18px; margin-bottom:40px;">
+            I'm <strong style="color:#00eaff;">Ayush Kumar Ray</strong>, a CSE student at Parul University (2023–2027) with hands-on expertise across 
+            <strong style="color:#00eaff;">AI/ML Engineering, Agentic AI, Data Analytics, and Full-Stack Development</strong>.
+            <br><br>
+            I specialize in building intelligent distributed systems, IoT integrations, and full-stack platforms using <strong style="color:#00ffaa;">FastAPI, React, PostgreSQL/PostGIS, and WebSockets</strong>. I have experience developing robust APIs, real-time tracking systems, and intelligent geospatial routing solutions. My featured project <strong style="color:#00ffaa;">LifePulse</strong> is a smart emergency blood donation platform that matches eligible donors with urgent requests using intelligent geographic routing, ring-based escalation, and real-time GPS tracking.
+            <br><br>
+            I've solved <strong style="color:#00eaff;">250+ DSA problems</strong> across LeetCode, CodeChef, HackerRank, and Smart Interviews. I hold certifications from AWS, IBM, and ServiceNow.
+        </p>
+
+        <!-- Highlighted Skill Boxes -->
+        <div style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:25px;
+        ">
+
+            <!-- Box 1 -->
+            <div style="
+                background:#111;
+                padding:25px;
+                border-radius:12px;
+                border:1px solid #1f1f1f;
+                box-shadow:0 0 12px rgba(0,238,255,0.15);
+            ">
+                <h3 style="color:#00eaff; margin-bottom:10px; font-size:20px;">
+                    <i class="fas fa-bullseye"></i> Full-Stack Development
+                </h3>
+                <p style="line-height:1.6;">
+                    Building robust, responsive, and scalable modern web applications using modern frontend and backend frameworks.
+                </p>
+            </div>
+
+            <!-- Box 2 -->
+            <div style="
+                background:#111;
+                padding:25px;
+                border-radius:12px;
+                border:1px solid #1f1f1f;
+                box-shadow:0 0 12px rgba(0,255,170,0.15);
+            ">
+                <h3 style="color:#00ffaa; margin-bottom:10px; font-size:20px;">
+                    <i class="fas fa-cogs"></i> AI/ML Integration
+                </h3>
+                <p style="line-height:1.6;">
+                    Developing intelligent solutions and integrating Machine Learning models to solve complex real-world problems.
+                </p>
+            </div>
+
+            <!-- Box 3 -->
+            <div style="
+                background:#111;
+                padding:25px;
+                border-radius:12px;
+                border:1px solid #1f1f1f;
+                box-shadow:0 0 12px rgba(255,0,255,0.15);
+            ">
+                <h3 style="color:#ff6bff; margin-bottom:10px; font-size:20px;">
+                    <i class="fas fa-code"></i> Backend Architecture
+                </h3>
+                <p style="line-height:1.6;">
+                    Designing efficient databases, APIs, and microservices for scalable software solutions.
+                </p>
+            </div>
+
+            <!-- Box 4 -->
+            <div style="
+                background:#111;
+                padding:25px;
+                border-radius:12px;
+                border:1px solid #1f1f1f;
+                box-shadow:0 0 12px rgba(255,200,0,0.15);
+            ">
+                <h3 style="color:#ffcc33; margin-bottom:10px; font-size:20px;">
+                    <i class="fas fa-chart-line"></i> Problem Solving (DSA)
+                </h3>
+                <p style="line-height:1.6;">
+                    Strong analytical skills with a focus on optimizing algorithms and conquering data structures challenges.
+                </p>
+            </div>
+
+        </div>
+    </div>
+                        </div>
+
+                        <div class="credential-edc-exp credential-experience">
+                            <section class="experience-section">
+    <h2 data-aos="fade-up">⚡ Experience</h2>
+
+    <div class="timeline">
+
+        <!-- PROJECT EXPERIENCE 1 -->
+        <div class="exp-card" data-aos="fade-right">
+            <h4>2026</h4>
+            <h3><span class="icon">💻</span>Emergency Response & Hospital Coordination Platform</h3>
+            <h5>IoT • Distributed Systems • Emergency Response</h5>
+            <p>An IoT accident-detection system using Arduino/Raspberry Pi airbag-crash sensors that streams sensor data to the backend through MQTT/HTTP. Designed a fault-tolerant hospital coordination backend across 20+ decoupled API endpoints. Achieved zero incorrect routing in failure simulations, utilizing PostgreSQL/PostGIS indexing to optimize geospatial query performance.</p>
+
+            <div class="badge-box">
+                <span class="badge">FastAPI</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">PostGIS</span>
+                <span class="badge">Redis</span>
+                <span class="badge">WebSockets</span>
+                <span class="badge">Firebase</span>
+                <span class="badge">Arduino</span>
+                <span class="badge">MQTT</span>
+                <span class="badge">pytest</span>
+            </div>
+        </div>
+
+        <!-- PROJECT EXPERIENCE 2 -->
+        <div class="exp-card" data-aos="fade-right">
+            <h4>2026</h4>
+            <h3><span class="icon">💻</span>LifePulse AI – Smart Blood Donation Network</h3>
+            <h5>Emergency Healthcare • Full-Stack • Intelligent Donor Matching</h5>
+            <p>Built and deployed a full-stack emergency blood donation platform that matches eligible nearby donors with urgent requests using blood-group compatibility, donor eligibility, availability, geographic proximity, and ring-based escalation. Implemented real-time emergency notifications via Firebase, live GPS tracking, road-based ETA via OSRM, and end-to-end donation lifecycle management. Enforces a strict 56-day donor recovery period.</p>
+
+            <div class="badge-box">
+                <span class="badge">React</span>
+                <span class="badge">FastAPI</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">PostGIS</span>
+                <span class="badge">Redis</span>
+                <span class="badge">WebSockets</span>
+                <span class="badge">Firebase</span>
+                <span class="badge">OSRM</span>
+                <span class="badge">Alembic</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+                        </div>
+
+                        <div class="credential-edc-exp credential-education">
+                            <h2 class="neon-title" data-aos="fade-up">🎓 Education</h2>
+
+<div class="edu-timeline">
+
+    <div class="edu-card" data-aos="zoom-in">
+        <h4>2023 – 2027</h4>
+        <h3>Bachelor of Technology in Computer Science Engineering</h3>
+        <h5>Parul University, Vadodara, Gujarat — CGPA: 7.84 / 10</h5>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">Relevant Coursework: DSA, OOP, DBMS, Operating Systems, Computer Networks, Software Engineering</p>
+    </div>
+
+</div>
+
+
+<!-- 🌟 SKILLS SECTION -->
+<h2 class="neon-title" data-aos="fade-up">🛠️ Skills</h2>
+
+<div class="skills-grid">
+
+    <div class="skill-box" data-aos="zoom-in">
+        <span class="percent">Python, Java, C++, JS, SQL</span>
+        <h3>Programming Languages</h3>
+    </div>
+
+    <div class="skill-box" data-aos="zoom-in">
+        <span class="percent">IoT, WebSockets, Firebase</span>
+        <h3>Real-Time Systems</h3>
+    </div>
+
+    <div class="skill-box" data-aos="zoom-in">
+        <span class="percent">Scikit-learn, SMOTE, NLP</span>
+        <h3>Machine Learning</h3>
+    </div>
+
+    <div class="skill-box" data-aos="zoom-in">
+        <span class="percent">Django, FastAPI, Spring Boot</span>
+        <h3>Backend & APIs</h3>
+    </div>
+
+    <div class="skill-box" data-aos="zoom-in">
+        <span class="percent">PostgreSQL, MySQL, MongoDB</span>
+        <h3>Databases</h3>
+    </div>
+
+    <div class="skill-box" data-aos="zoom-in">
+        <span class="percent">AWS, Firebase, CI/CD, Git</span>
+        <h3>Cloud & DevOps</h3>
+    </div>
+
+    <div class="skill-box" data-aos="zoom-in">
+        <span class="percent">Power BI, Matplotlib, Seaborn</span>
+        <h3>Data Visualization</h3>
+    </div>
+
+    <div class="skill-box" data-aos="zoom-in">
+        <span class="percent">250+ Problems Solved</span>
+        <h3>DSA & Problem Solving</h3>
+    </div>
+
+</div>
+
+
+<!-- 🌟 AWARDS SECTION -->
+<h2 class="neon-title" data-aos="fade-up">🏆 Awards</h2>
+
+<div class="awards-box" data-aos="zoom-in">
+    <span>2024</span>
+    <h3>Smart Coder (Bronze) — Smart Interviews</h3>
+    <p>Certified for DSA proficiency. Solved 250+ problems across LeetCode, CodeChef, HackerRank — specializing in Dynamic Programming, Graph Algorithms, Trees, Recursion, Greedy, and Sliding Window techniques.</p>
+</div>
+
+<div class="awards-box" data-aos="zoom-in" style="margin-top: 15px;">
+    <span>2024</span>
+    <h3>5x Certified — AWS, IBM, ServiceNow</h3>
+    <p>AWS Academy Cloud Foundations, IBM AI Fundamentals, ServiceNow CSA & CAD certifications demonstrating cross-domain technical competence in cloud, AI, and enterprise platforms.</p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <!-- Footer -->
+        <footer class="footer-area">
+            <div class="container">
+                <div class="footer-content text-center">
+                    <a href="./index.html" class="logo">
+                        <img src="images/extras/logo.png" alt="Logo">
+                    </a>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="about.html">About</a></li>
+                        <li><a href="works.html">Projects</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <p class="copyright">
+                        © All rights reserved made with 💜 by <span>Ayush Kumar Ray</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    
+
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+
+</body></html>
