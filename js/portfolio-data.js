@@ -158,7 +158,11 @@ const PortfolioData = {
             role: "Full-Stack & Systems Engineer",
             category: "Emergency Healthcare • Full-Stack • Intelligent Donor Matching",
             description: "Built and deployed a full-stack emergency blood donation platform that matches eligible nearby donors with urgent requests using blood-group compatibility, donor eligibility, availability, geographic proximity, and ring-based escalation. Implemented real-time emergency notifications via Firebase, live GPS tracking, road-based ETA via OSRM, and end-to-end donation lifecycle management. Enforces a strict 56-day donor recovery period.",
-            badges: ["React", "FastAPI", "PostgreSQL", "PostGIS", "Redis", "WebSockets", "Firebase", "OSRM", "Alembic"]
+            badges: ["React", "FastAPI", "PostgreSQL", "PostGIS", "Redis", "WebSockets", "Firebase", "OSRM", "Alembic"],
+            links: {
+                live: "https://lifepulse-ai-by-ayush-ray.vercel.app",
+                github: "https://github.com/rayayush7204-ctrl/LifePulse-AI"
+            }
         },
         {
             year: "2026",
@@ -166,7 +170,10 @@ const PortfolioData = {
             role: "Backend & IoT Systems Engineer",
             category: "IoT • Distributed Systems • Emergency Response",
             description: "An IoT accident-detection system using Arduino/Raspberry Pi airbag-crash sensors that streams sensor data to the backend through MQTT/HTTP. Designed a fault-tolerant hospital coordination backend across 20+ decoupled API endpoints. Achieved zero incorrect routing in failure simulations, utilizing PostgreSQL/PostGIS indexing to optimize geospatial query performance.",
-            badges: ["FastAPI", "PostgreSQL", "PostGIS", "Redis", "WebSockets", "Firebase", "Arduino", "MQTT", "pytest"]
+            badges: ["FastAPI", "PostgreSQL", "PostGIS", "Redis", "WebSockets", "Firebase", "Arduino", "MQTT", "pytest"],
+            links: {
+                github: "https://github.com/rayayush7204-ctrl"
+            }
         },
         {
             year: "2024–2025",
@@ -174,7 +181,11 @@ const PortfolioData = {
             role: "Machine Learning Engineer",
             category: "Machine Learning • Deep Learning • Explainable AI",
             description: "Developed a hybrid fraud detection model combining a deep learning autoencoder with Random Forest on 284,807 transactions (0.17% fraud rate). Tuned decision threshold achieving 0.977 ROC-AUC, 0.817 PR-AUC, and 0.80 F1-Score. Integrated SHAP TreeExplainer for transparent feature attribution in fintech compliance.",
-            badges: ["Python", "Streamlit", "TensorFlow", "Scikit-learn", "SHAP", "Docker", "Pandas", "NumPy"]
+            badges: ["Python", "Streamlit", "TensorFlow", "Scikit-learn", "SHAP", "Docker", "Pandas", "NumPy"],
+            links: {
+                live: "https://anand-singh-git-hub-fraud-radar-appmain-b2fgwv.streamlit.app/",
+                github: "https://github.com/rayayush7204-ctrl/Fraud-Radar"
+            }
         }
     ],
 
@@ -402,7 +413,22 @@ PortfolioData.renderExperience = function () {
     const expContainer = document.getElementById("dynamic-experience-container");
     if (!expContainer || !PortfolioData.experience) return;
     
-    expContainer.innerHTML = PortfolioData.experience.map(exp => `
+    expContainer.innerHTML = PortfolioData.experience.map(exp => {
+        let linksHtml = "";
+        if (exp.links) {
+            const btns = [];
+            if (exp.links.live) {
+                btns.push(`<a href="${exp.links.live}" target="_blank" class="badge" style="background: var(--neon-blue); color: black; font-weight: 600; text-decoration: none; padding: 6px 14px; font-size: 0.8rem;">🌐 Live Demo</a>`);
+            }
+            if (exp.links.github) {
+                btns.push(`<a href="${exp.links.github}" target="_blank" class="badge" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3); color: white; text-decoration: none; padding: 6px 14px; font-size: 0.8rem;">🐙 GitHub Repo</a>`);
+            }
+            if (btns.length > 0) {
+                linksHtml = `<div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">${btns.join("\n")}</div>`;
+            }
+        }
+
+        return `
         <div class="exp-card" data-aos="fade-right">
             <h4>${exp.year}</h4>
             <h3><span class="icon">💻</span>${exp.title}</h3>
@@ -411,8 +437,10 @@ PortfolioData.renderExperience = function () {
             <div class="badge-box">
                 ${(exp.badges || []).map(b => `<span class="badge">${b}</span>`).join("\n")}
             </div>
+            ${linksHtml}
         </div>
-    `).join("\n");
+        `;
+    }).join("\n");
 };
 
 PortfolioData.renderSkills = function () {
