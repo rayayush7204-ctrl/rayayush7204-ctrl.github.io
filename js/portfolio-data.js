@@ -113,7 +113,7 @@ const PortfolioData = {
             links: {
                 github: "https://github.com/rayayush7204-ctrl"
             },
-            image: "images/extras/project-1.png"
+            image: "images/projects/emergency-response.jpg"
         },
         {
             id: "fraud-radar",
