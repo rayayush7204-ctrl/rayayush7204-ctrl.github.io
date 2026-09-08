@@ -222,91 +222,160 @@
                         <h1 class="section-heading" data-aos="fade-up"><img src="images/extras/star-2.png" alt="Star">
                             Featured Projects <img src="images/extras/star-2.png" alt="Star"></h1>
 
-                        <!-- PROJECT 1: Emergency Response -->
-                        <div class="proj-card" data-aos="fade-up">
-                            <div class="proj-content">
-                                <div class="proj-year">2026</div>
-                                <div class="proj-title">Emergency Response & Hospital Coordination Platform</div>
-                                <div class="proj-cat">IoT • Distributed Systems • Emergency Response</div>
-                                
-                                <div class="proj-desc">
-                                    <strong>WHAT I BUILT</strong><br>
-                                    An IoT accident-detection system using Arduino/Raspberry Pi airbag-crash sensors that streams sensor data to the backend through MQTT/HTTP.<br><br>
+                        <div id="dynamic-projects-container">
+                            <!-- PROJECT 1: LifePulse AI (Priority #1) -->
+                            <div class="proj-card" data-aos="fade-up">
+                                <div class="proj-content">
+                                    <div class="proj-year">2026</div>
+                                    <div class="proj-title">LifePulse AI – Smart Blood Donation Network</div>
+                                    <div class="proj-cat">Emergency Healthcare • Full-Stack • Real-Time Systems</div>
                                     
-                                    <strong>KEY TECHNICAL IMPLEMENTATION</strong><br>
-                                    Designed a fault-tolerant hospital coordination backend using FastAPI, PostgreSQL/PostGIS for geospatial queries, and WebSockets/Firebase for real-time synchronization. Implemented object-oriented design and modular architecture across 20+ decoupled API endpoints, validated with comprehensive pytest integration testing.<br><br>
-                                    
-                                    <strong>IMPORTANT RESULT</strong><br>
-                                    The system achieved zero incorrect routing in failure simulations, utilizing PostgreSQL/PostGIS indexing to optimize geospatial query performance.
-                                </div>
-                                
-                                <div class="proj-tech">
-                                    <span class="tech-pill">FastAPI</span>
-                                    <span class="tech-pill">PostgreSQL / PostGIS</span>
-                                    <span class="tech-pill">Redis</span>
-                                    <span class="tech-pill">WebSockets</span>
-                                    <span class="tech-pill">Firebase</span>
-                                    <span class="tech-pill">Arduino / Raspberry Pi</span>
-                                    <span class="tech-pill">MQTT</span>
-                                    <span class="tech-pill">pytest</span>
-                                </div>
-                                
-                                <div class="proj-actions">
-                                    <a href="https://github.com/rayayush7204-ctrl" target="_blank" class="proj-btn proj-btn-outline">
-                                        <i class="iconoir-github"></i> GitHub
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="proj-image-wrapper">
-                                <img src="images/extras/project-1.png" alt="Emergency Response">
-                            </div>
-                        </div>
+                                    <div class="proj-desc">
+                                        <strong>WHAT I BUILT</strong><br>
+                                        Built and deployed a full-stack emergency blood donation platform that matches eligible nearby donors with urgent requests using blood-group compatibility, donor eligibility, availability, geographic proximity, and ring-based escalation.<br><br>
+                                        
+                                        <strong>KEY TECHNICAL IMPLEMENTATION</strong><br>
+                                        Designed a geospatial distance and blood-type scoring algorithm for emergency donor-ranking. Implemented real-time push notifications via Firebase Cloud Messaging and live GPS donor tracking using Browser Geolocation API and WebSockets. Integrated road-based ETA via OSRM, normalized database schemas with spatial PostGIS indexing, and tuned Redis caching for sub-second responses under load while strictly enforcing a 56-day donor recovery period.<br><br>
 
-                        <!-- PROJECT 2: LifePulse AI -->
-                        <div class="proj-card reverse" data-aos="fade-up">
-                            <div class="proj-content">
-                                <div class="proj-year">2026</div>
-                                <div class="proj-title">LifePulse AI – Smart Blood Donation Network</div>
-                                <div class="proj-cat">Emergency Healthcare • Full-Stack • Intelligent Donor Matching</div>
-                                
-                                <div class="proj-desc">
-                                    <strong>WHAT IT DOES</strong><br>
-                                    Built and deployed a full-stack emergency blood donation platform that matches eligible nearby donors with urgent requests using blood-group compatibility, donor eligibility, availability, geographic proximity, and ring-based escalation.<br><br>
+                                        <strong>IMPORTANT RESULT</strong><br>
+                                        Sub-second donor dispatch latency and 100% reliable real-time tracking across WebSockets and Firebase fallbacks.
+
+                                        <div class="proj-workflow">
+                                            <div class="workflow-step">Emergency Request</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Eligible Donor Matching</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Donor Dispatch</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Donor Accepts</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Live GPS Tracking</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Arrival</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Donation</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Completion</div>
+                                        </div>
+                                    </div>
                                     
-                                    <strong>KEY TECHNICAL IMPLEMENTATION</strong><br>
-                                    Implemented real-time emergency notifications via Firebase, live GPS donor tracking using Browser Geolocation API and WebSockets, road-based ETA via OSRM, and end-to-end donation lifecycle management. Enforces a strict 56-day recovery period for donors using PostgreSQL/PostGIS.<br><br>
+                                    <div class="proj-tech">
+                                        <span class="tech-pill">React</span>
+                                        <span class="tech-pill">FastAPI</span>
+                                        <span class="tech-pill">PostgreSQL / PostGIS</span>
+                                        <span class="tech-pill">Redis</span>
+                                        <span class="tech-pill">WebSockets</span>
+                                        <span class="tech-pill">Firebase</span>
+                                        <span class="tech-pill">OSRM</span>
+                                        <span class="tech-pill">Alembic</span>
+                                    </div>
                                     
-                                    <div class="proj-workflow">
-                                        <div class="workflow-step">Emergency Request</div><div class="workflow-arrow">→</div>
-                                        <div class="workflow-step">Eligible Donor Matching</div><div class="workflow-arrow">→</div>
-                                        <div class="workflow-step">Donor Dispatch</div><div class="workflow-arrow">→</div>
-                                        <div class="workflow-step">Donor Accepts</div><div class="workflow-arrow">→</div>
-                                        <div class="workflow-step">Live GPS Tracking</div><div class="workflow-arrow">→</div>
-                                        <div class="workflow-step">Arrival</div><div class="workflow-arrow">→</div>
-                                        <div class="workflow-step">Donation</div><div class="workflow-arrow">→</div>
-                                        <div class="workflow-step">Completion</div>
+                                    <div class="proj-actions">
+                                        <a href="https://lifepulse-ai-by-ayush-ray.vercel.app" target="_blank" class="proj-btn">
+                                            <i class="iconoir-globe"></i> Live Demo
+                                        </a>
+                                        <a href="https://github.com/rayayush7204-ctrl/LifePulse-AI" target="_blank" class="proj-btn proj-btn-outline">
+                                            <i class="iconoir-github"></i> GitHub
+                                        </a>
                                     </div>
                                 </div>
-                                
-                                <div class="proj-tech">
-                                    <span class="tech-pill">React</span>
-                                    <span class="tech-pill">FastAPI</span>
-                                    <span class="tech-pill">PostgreSQL / PostGIS</span>
-                                    <span class="tech-pill">Redis</span>
-                                    <span class="tech-pill">WebSockets</span>
-                                    <span class="tech-pill">Firebase</span>
-                                    <span class="tech-pill">OSRM</span>
-                                    <span class="tech-pill">Alembic</span>
-                                </div>
-                                
-                                <div class="proj-actions">
-                                    <a href="https://lifepulse-ai-by-ayush-ray.vercel.app" target="_blank" class="proj-btn">
-                                        <i class="iconoir-globe"></i> Live Demo
-                                    </a>
+                                <div class="proj-image-wrapper">
+                                    <img src="images/projects/lifepulse/Screenshot_28-8-2026_205113_lifepulse-ai-by-ayush-ray.vercel.app.jpeg" alt="LifePulse AI">
                                 </div>
                             </div>
-                            <div class="proj-image-wrapper">
-                                <img src="images/projects/lifepulse/Screenshot_28-8-2026_205113_lifepulse-ai-by-ayush-ray.vercel.app.jpeg" alt="LifePulse AI">
+
+                            <!-- PROJECT 2: Emergency Response & Hospital Coordination Platform (Priority #2) -->
+                            <div class="proj-card reverse" data-aos="fade-up">
+                                <div class="proj-content">
+                                    <div class="proj-year">2026</div>
+                                    <div class="proj-title">Emergency Response & Hospital Coordination Platform</div>
+                                    <div class="proj-cat">IoT • Distributed Systems • Emergency Response</div>
+                                    
+                                    <div class="proj-desc">
+                                        <strong>WHAT I BUILT</strong><br>
+                                        An IoT accident-detection system using Arduino/Raspberry Pi airbag-crash sensors that streams sensor data to the backend through MQTT/HTTP with zero manual reporting delay.<br><br>
+                                        
+                                        <strong>KEY TECHNICAL IMPLEMENTATION</strong><br>
+                                        Architected a fault-tolerant hospital coordination backend across 20+ decoupled REST API endpoints using FastAPI, PostgreSQL/PostGIS for geospatial queries, and WebSockets/Firebase for real-time synchronization. Sustained correct hospital matching during partial outages, achieving zero incorrect routing in failure simulations. Applied modular object-oriented design and comprehensive pytest unit and integration test suites.<br><br>
+                                        
+                                        <strong>IMPORTANT RESULT</strong><br>
+                                        Achieved zero incorrect routing in failure simulations, utilizing PostgreSQL/PostGIS indexing to optimize geospatial query performance.
+
+                                        <div class="proj-workflow">
+                                            <div class="workflow-step">Crash Sensor Trigger</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">MQTT / HTTP Telemetry</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Fault-Tolerant Routing</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Hospital Bed Matching</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Real-Time WebSocket Sync</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Emergency Dispatch</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="proj-tech">
+                                        <span class="tech-pill">FastAPI</span>
+                                        <span class="tech-pill">PostgreSQL / PostGIS</span>
+                                        <span class="tech-pill">Redis</span>
+                                        <span class="tech-pill">WebSockets</span>
+                                        <span class="tech-pill">Firebase</span>
+                                        <span class="tech-pill">Arduino / Raspberry Pi</span>
+                                        <span class="tech-pill">MQTT</span>
+                                        <span class="tech-pill">pytest</span>
+                                    </div>
+                                    
+                                    <div class="proj-actions">
+                                        <a href="https://github.com/rayayush7204-ctrl" target="_blank" class="proj-btn proj-btn-outline">
+                                            <i class="iconoir-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="proj-image-wrapper">
+                                    <img src="images/extras/project-1.png" alt="Emergency Response">
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 3: Credit Card Fraud Detection (Fraud Radar) (Priority #3) -->
+                            <div class="proj-card" data-aos="fade-up">
+                                <div class="proj-content">
+                                    <div class="proj-year">2024–2025</div>
+                                    <div class="proj-title">Credit Card Fraud Detection (Fraud Radar)</div>
+                                    <div class="proj-cat">Machine Learning • Deep Learning • Explainable AI (XAI)</div>
+                                    
+                                    <div class="proj-desc">
+                                        <strong>WHAT I BUILT</strong><br>
+                                        A production-grade hybrid fraud detection system tackling severe class imbalance across 284,807 Kaggle credit card transactions (0.17% fraud rate), featuring instant fraud scoring and full transparency via SHAP feature attributions.<br><br>
+                                        
+                                        <strong>KEY TECHNICAL IMPLEMENTATION</strong><br>
+                                        Engineered a deep neural Autoencoder compressing 30 numerical features down to 12 latent representations, concatenating latent features and reconstruction errors into a 43-dimensional vector. Trained an optimized Random Forest classifier achieving 0.977 ROC-AUC, 0.817 PR-AUC, and 0.80 F1-Score (Precision 0.78, Recall 0.83, MCC 0.802). Integrated TreeExplainer SHAP plots for real-time local decision attribution and batch evaluation.<br><br>
+
+                                        <strong>IMPORTANT RESULT</strong><br>
+                                        0.977 ROC-AUC and 0.80 F1-score with interpretable SHAP explanations for regulatory compliance.
+
+                                        <div class="proj-workflow">
+                                            <div class="workflow-step">Transaction Ingestion</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">StandardScaler Normalization</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Autoencoder Compression</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">43-Dim Feature Vector</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">Random Forest Prediction</div><div class="workflow-arrow">→</div>
+                                            <div class="workflow-step">SHAP TreeExplainer Attribution</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="proj-tech">
+                                        <span class="tech-pill">Python</span>
+                                        <span class="tech-pill">Streamlit</span>
+                                        <span class="tech-pill">Scikit-learn</span>
+                                        <span class="tech-pill">TensorFlow / Keras</span>
+                                        <span class="tech-pill">SHAP</span>
+                                        <span class="tech-pill">Docker</span>
+                                        <span class="tech-pill">Pandas</span>
+                                        <span class="tech-pill">NumPy</span>
+                                    </div>
+                                    
+                                    <div class="proj-actions">
+                                        <a href="https://anand-singh-git-hub-fraud-radar-appmain-b2fgwv.streamlit.app/" target="_blank" class="proj-btn">
+                                            <i class="iconoir-globe"></i> Live Demo
+                                        </a>
+                                        <a href="https://github.com/rayayush7204-ctrl/Fraud-Radar" target="_blank" class="proj-btn proj-btn-outline">
+                                            <i class="iconoir-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="proj-image-wrapper">
+                                    <img src="images/projects/fraud-radar.jpg" alt="Credit Card Fraud Detection (Fraud Radar)">
+                                </div>
                             </div>
                         </div>
 
@@ -357,7 +426,7 @@
                     </div>
                     <div class="col-md-4" data-aos="zoom-in">
                         <div class="about-crenditials-box info-box shadow-box">
-                            <a class="overlay-link" href="./credentials.html"></a>
+                            <a class="overlay-link" href="./about.html"></a>
                             <img src="images/extras/bg1.png" alt="BG" class="bg-img">
                             <img src="images/extras/logo.png" alt="Sign">
                             <div class="d-flex align-items-center justify-content-between">
@@ -366,7 +435,7 @@
                                     <h1>Credentials</h1>
                                 </div>
 
-                                <a href="./credentials.html" class="about-btn">
+                                <a href="./about.html" class="about-btn">
                                     <img src="images/extras/icon.svg" alt="Button">
                                 </a>
 
@@ -403,6 +472,7 @@
     <script src="js/jquery-3.6.4.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/aos.js"></script>
+    <script src="js/portfolio-data.js"></script>
     <script src="js/main.js"></script>
 
 </body>

@@ -88,9 +88,9 @@
       "path": ".vscode/context-optimizer/memory.json",
       "priority": "low",
       "summary": "  \"project\": {     \"name\": \"Ayush Portfolio\",     \"description\": \"\",",
-      "lastAnalyzed": "2026-09-07T22:34:32.429Z",
-      "hash": "6fa78b0a32efd7b71ef96c2f6c006bc6072c3a1d8b788c0082ef1ef722faaae0",
-      "size": 24464,
+      "lastAnalyzed": "2026-09-07T22:37:54.392Z",
+      "hash": "6bbc8782d7db67eb174c36724663c26c3bca13e051808b26fbe808f605d02ef6",
+      "size": 24593,
       "language": "JSON"
     },
     {
@@ -455,11 +455,11 @@
     },
     {
       "path": "index.html",
-      "priority": "medium",
+      "priority": "low",
       "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
-      "lastAnalyzed": "2026-09-07T22:36:24.213Z",
-      "hash": "26ee15e68ae2f5a1856df4c054c3916b0899ce7d4252f159a5154e32f0df6e5e",
-      "size": 17361,
+      "lastAnalyzed": "2026-09-07T22:37:54.463Z",
+      "hash": "669e015cbaf4942ad1290e6e5ec39fea0095e474f076e7fccc8e9985797fc629",
+      "size": 17363,
       "language": "HTML"
     },
     {
@@ -573,6 +573,11 @@
   },
   "conversations": [
     {
+      "date": "2026-09-07T22:37:54.293Z",
+      "type": "note",
+      "content": "Git commit: Use latest resume"
+    },
+    {
       "date": "2026-09-07T22:34:32.214Z",
       "type": "decision",
       "content": "Git commit: Remove Ayush resume"
@@ -591,7 +596,7 @@
   "rules": [],
   "developerNotes": [],
   "meta": {
-    "lastUpdated": "2026-09-07T22:36:24.213Z",
+    "lastUpdated": "2026-09-07T22:37:54.463Z",
     "version": "1.0.0",
     "workspaceRoot": "d:\\Ayush Portfolio",
     "tokenEstimate": {

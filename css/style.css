@@ -1978,6 +1978,9 @@ ol {
 }
 
 @media (max-width: 585px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
     .about-area .about-me-box {
         flex-direction: column;
     }
