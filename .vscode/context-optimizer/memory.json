@@ -20,15 +20,14 @@
     "rootFolders": [
       "css",
       "images",
-      "irainsec.github.io-main",
       "js"
     ],
     "mainEntryPoints": [
       "README.md",
       "js/main.js"
     ],
-    "totalFiles": 27,
-    "analyzedFiles": 26
+    "totalFiles": 25,
+    "analyzedFiles": 24
   },
   "dependencies": {
     "production": {},
@@ -88,9 +87,9 @@
       "path": ".vscode/context-optimizer/memory.json",
       "priority": "low",
       "summary": "  \"project\": {     \"name\": \"Ayush Portfolio\",     \"description\": \"\",",
-      "lastAnalyzed": "2026-09-07T22:37:54.392Z",
-      "hash": "6bbc8782d7db67eb174c36724663c26c3bca13e051808b26fbe808f605d02ef6",
-      "size": 24593,
+      "lastAnalyzed": "2026-09-08T16:59:10.626Z",
+      "hash": "8d4ac9d2df8297f3cf5169f0937bea827411bdf339e0936beeb36f45b0d419af",
+      "size": 25734,
       "language": "JSON"
     },
     {
@@ -322,7 +321,7 @@
       "path": "c:/Users/rayay/AppData/Roaming/Antigravity IDE/User/settings.json",
       "priority": "medium",
       "summary": "    \"python.languageServer\": \"Default\"\r",
-      "lastAnalyzed": "2026-09-07T22:13:33.342Z",
+      "lastAnalyzed": "2026-09-08T16:52:15.269Z",
       "hash": "927e30f8b91e4f123de2d20c7107dae9af9bdadd3dcd107d3d96c1017e0d0442",
       "size": 44,
       "language": "JSON"
@@ -358,9 +357,9 @@
       "path": "about.html",
       "priority": "low",
       "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
-      "lastAnalyzed": "2026-09-07T22:27:36.658Z",
-      "hash": "923722959fcd7a4ce7d48ddcbd2b6abd89d3b002e2566684f8a189c3b2f8f0a2",
-      "size": 22161,
+      "lastAnalyzed": "2026-09-08T13:53:57.819Z",
+      "hash": "0433d6f2bce5fcda808ffa4d70ca29efe47d5ba783e3f71a4d33527f3b31e019",
+      "size": 26938,
       "language": "HTML"
     },
     {
@@ -376,27 +375,27 @@
       "path": "blogs.html",
       "priority": "low",
       "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
-      "lastAnalyzed": "2026-09-07T22:27:36.683Z",
-      "hash": "4e44939928e012de6145543062e47eaa70e7eae80e703ebe6c96a7c375fb6361",
-      "size": 12565,
+      "lastAnalyzed": "2026-09-08T13:44:23.401Z",
+      "hash": "31a5d3e0e81169e914fef47a3a87b92729656ac739bc177f12d94942640b0504",
+      "size": 12553,
       "language": "HTML"
     },
     {
       "path": "certifications.html",
       "priority": "low",
       "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
-      "lastAnalyzed": "2026-09-07T22:27:36.694Z",
-      "hash": "dc59d0517396341c519f579d2fedaa5efb3d7c80281ddf4d4d117abdbf3db583",
-      "size": 15513,
+      "lastAnalyzed": "2026-09-08T13:44:23.410Z",
+      "hash": "6dc997a0365c2366a325e9211cb4ce06fb825f12b367259d984b637714a1e93c",
+      "size": 16283,
       "language": "HTML"
     },
     {
       "path": "contact.html",
       "priority": "low",
       "summary": "Functions: sendEmail",
-      "lastAnalyzed": "2026-09-07T22:27:36.705Z",
-      "hash": "7be1147b8fe5566531d653c8f98119bb7805151146f4a12c78740829f335d647",
-      "size": 8776,
+      "lastAnalyzed": "2026-09-08T13:44:23.421Z",
+      "hash": "31df0f7a52eb749fcd441694853f3e109c7192ee6054c32e619a2ac34a79e6ed",
+      "size": 8781,
       "language": "HTML"
     },
     {
@@ -429,19 +428,19 @@
     {
       "path": "css/style.css",
       "priority": "low",
-      "summary": "    -- Table of Content --     * # Preloader     * # InfoBox",
-      "lastAnalyzed": "2026-09-07T22:27:36.755Z",
-      "hash": "436d8f4d46635db17d96e664d87532eb1be1825022c458c38789b7e19b36532a",
-      "size": 51816,
+      "summary": "    -- Table of Content --\r     * # Preloader\r     * # InfoBox\r",
+      "lastAnalyzed": "2026-09-08T13:53:57.890Z",
+      "hash": "8c3659b350f562f80e210c48f11c753972686abbffd10863fdeea481723656fd",
+      "size": 54024,
       "language": "CSS"
     },
     {
       "path": "htb.html",
       "priority": "low",
       "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
-      "lastAnalyzed": "2026-09-07T22:27:36.761Z",
-      "hash": "b5c5676d5bcce7a63a13199b7a07d60682b48b496559a491b0d5cb0cd1412b40",
-      "size": 11095,
+      "lastAnalyzed": "2026-09-08T13:44:23.444Z",
+      "hash": "f99c2145a211915d6bb725d9d45b6c23c3c68df71188e2af739a5e7b9591efc3",
+      "size": 11083,
       "language": "HTML"
     },
     {
@@ -457,9 +456,9 @@
       "path": "index.html",
       "priority": "low",
       "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
-      "lastAnalyzed": "2026-09-07T22:37:54.463Z",
-      "hash": "669e015cbaf4942ad1290e6e5ec39fea0095e474f076e7fccc8e9985797fc629",
-      "size": 17363,
+      "lastAnalyzed": "2026-09-08T13:44:23.464Z",
+      "hash": "a101972a5d48d565192d11da7a2a7cfc5ef04b5ca85eed05c2d25bf3a47a27b2",
+      "size": 17492,
       "language": "HTML"
     },
     {
@@ -502,18 +501,18 @@
       "path": "reports.html",
       "priority": "low",
       "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
-      "lastAnalyzed": "2026-09-07T22:27:37.280Z",
-      "hash": "8e4015e8a22d15336bc3239c6d6ca83a2990953d70880092b5bd9ad6bff45324",
-      "size": 11093,
+      "lastAnalyzed": "2026-09-08T13:44:24.059Z",
+      "hash": "d425146c87501ed10ad3ca7f13fed390c8edde8f5af26c4f9b1a34ea96d4680e",
+      "size": 11081,
       "language": "HTML"
     },
     {
       "path": "thm.html",
       "priority": "low",
       "summary": "<!DOCTYPE html><html lang=\"en\"><head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r",
-      "lastAnalyzed": "2026-09-07T22:27:37.308Z",
-      "hash": "fa64483089dc969b9f3d3a63f032f9533b681810f0c5d670db1a9e5eba2b6b28",
-      "size": 11095,
+      "lastAnalyzed": "2026-09-08T13:44:24.073Z",
+      "hash": "586d658b9f98bad9be4ce80a4fd33c7f52e280e4626c31a26ef4cadac738bd9a",
+      "size": 11083,
       "language": "HTML"
     },
     {
@@ -538,19 +537,28 @@
       "path": "works.html",
       "priority": "low",
       "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
-      "lastAnalyzed": "2026-09-07T22:27:37.351Z",
-      "hash": "9d93df8346b6d0747503d3eb72cb7d150d679ae7fda90bbc04186b8396cbdd4a",
-      "size": 18610,
+      "lastAnalyzed": "2026-09-08T13:58:14.115Z",
+      "hash": "3400920fa688a672b6e1716aee12a8ab2feefbb3bc183703a37409bbba0c9238",
+      "size": 25488,
       "language": "HTML"
     },
     {
       "path": "youtube.html",
       "priority": "low",
       "summary": "<!DOCTYPE html>\r <html lang=\"en\">\r     <meta charset=\"UTF-8\">\r",
-      "lastAnalyzed": "2026-09-07T22:27:37.360Z",
-      "hash": "7b713f5edf0ed2d4e55a3b538fc16d14300a74ec876f847011fe6243d6100bbc",
-      "size": 12373,
+      "lastAnalyzed": "2026-09-08T13:44:24.103Z",
+      "hash": "25a9f098ab79ad7e526268237bf8e41c3dd5d02db95719105e7e29e17461c6cf",
+      "size": 12431,
       "language": "HTML"
+    },
+    {
+      "path": "js/portfolio-data.js",
+      "priority": "low",
+      "summary": "Functions: techPills",
+      "lastAnalyzed": "2026-09-08T13:58:14.113Z",
+      "hash": "b521eb9be8c11cf3e0be92f969fc108a2f8086666f718979f015cf8ba9d3c695",
+      "size": 25252,
+      "language": "JavaScript"
     }
   ],
   "features": {
@@ -567,11 +575,32 @@
   "architecture": {
     "summary": "",
     "decisions": [
+      "feat: integrate verified professional data, dynamic architecture, and AI-centric hero presentation",
       "Remove Ayush resume"
     ],
     "patterns": []
   },
   "conversations": [
+    {
+      "date": "2026-09-08T16:59:10.324Z",
+      "type": "note",
+      "content": "Git commit: Replace My Works/Projects image with new design (transparent bg)"
+    },
+    {
+      "date": "2026-09-08T13:58:14.034Z",
+      "type": "todo",
+      "content": "Git commit: feat: add dedicated IoT emergency response showcase image"
+    },
+    {
+      "date": "2026-09-08T13:53:57.774Z",
+      "type": "todo",
+      "content": "Git commit: feat: update to Hands-on Experience, add project action links and highlight Credit Card Fraud Detection"
+    },
+    {
+      "date": "2026-09-08T13:44:23.331Z",
+      "type": "decision",
+      "content": "Git commit: feat: integrate verified professional data, dynamic architecture, and AI-centric hero presentation"
+    },
     {
       "date": "2026-09-07T22:37:54.293Z",
       "type": "note",
@@ -596,13 +625,13 @@
   "rules": [],
   "developerNotes": [],
   "meta": {
-    "lastUpdated": "2026-09-07T22:37:54.463Z",
+    "lastUpdated": "2026-09-08T16:59:10.626Z",
     "version": "1.0.0",
     "workspaceRoot": "d:\\Ayush Portfolio",
     "tokenEstimate": {
-      "original": 1866,
-      "compressed": 236,
-      "savedPercent": 87.4
+      "original": 1872,
+      "compressed": 229,
+      "savedPercent": 87.8
     }
   }
 }
