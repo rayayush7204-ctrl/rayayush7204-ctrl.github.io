@@ -1,0 +1,11 @@
+# Local AI Agent Requirements (Local inference only via Ollama)
+# No paid APIs (No OpenAI, Anthropic, Gemini, etc.)
+
+requests>=2.31.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+fastapi>=0.110.0
+uvicorn>=0.28.0
+langchain-core>=1.6.0
+langchain-ollama>=1.1.0
+langgraph>=1.2.0
