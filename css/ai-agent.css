@@ -620,3 +620,86 @@
         font-size: 12px;
     }
 }
+
+/* ============================================================
+   WELCOME EXPERIENCE (Step 8)
+   ============================================================ */
+
+.ai-welcome-prompt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 16px;
+    margin: 6px 16px;
+    background: rgba(139, 92, 246, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 12px;
+    animation: welcomeFadeIn 0.4s ease-out;
+}
+
+.ai-welcome-prompt-text {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.ai-welcome-start-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 14px;
+    background: rgba(139, 92, 246, 0.18);
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    border-radius: 8px;
+    color: #c4b5fd;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    font-family: inherit;
+    line-height: 1.4;
+}
+
+.ai-welcome-start-btn:hover {
+    background: rgba(139, 92, 246, 0.32);
+    transform: scale(1.03);
+}
+
+.ai-welcome-start-btn:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 2px;
+}
+
+@keyframes welcomeFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   ACCESSIBILITY: prefers-reduced-motion
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .ai-welcome-prompt,
+    .ai-trigger-btn,
+    .ai-panel,
+    .ai-speak-btn,
+    .ai-mic-btn,
+    .ai-welcome-start-btn,
+    .ai-prompt-chip,
+    .ai-action-badge {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    @keyframes micPulse {
+        0%, 100% { box-shadow: none; }
+    }
+
+    @keyframes welcomeFadeIn {
+        from { opacity: 1; transform: none; }
+        to { opacity: 1; transform: none; }
+    }
+}

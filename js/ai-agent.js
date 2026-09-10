@@ -388,7 +388,22 @@
         "How can I contact Ayush?"
     ];
 
-    // 9. UI Controller Class
+    // 9. Welcome Experience Constants (Step 8)
+    const WELCOME_MESSAGE = "Welcome to Ayush's digital workspace. I'm your AI guide. Explore his projects, engineering skills, and the systems he's built. You can ask me anything.";
+    const WELCOME_SESSION_KEY = "portfolio_ai_welcome_seen";
+
+    function isWelcomeSeen() {
+        if (typeof sessionStorage === "undefined") return true;
+        return sessionStorage.getItem(WELCOME_SESSION_KEY) === "true";
+    }
+
+    function markWelcomeSeen() {
+        if (typeof sessionStorage !== "undefined") {
+            sessionStorage.setItem(WELCOME_SESSION_KEY, "true");
+        }
+    }
+
+    // 10. UI Controller Class
     class AIAssistantUI {
         constructor() {
             this.isOpen = false;
@@ -398,6 +413,11 @@
             this.recognizedTranscript = "";
             this.sessionId = getOrCreateSessionId();
             this.voiceOutput = new VoiceOutputController();
+
+            // Welcome state (Step 8)
+            this.isWelcomeSession = !isWelcomeSeen();
+            this.welcomeTriggered = false;
+
             this.initDOM();
             this.initSpeechRecognition();
             this.bindEvents();
@@ -433,9 +453,9 @@
                     <button class="ai-panel-close-btn" id="aiCloseBtn" aria-label="Close chat panel">✕</button>
                 </div>
                 <div class="ai-messages-wrap" id="aiMessagesWrap">
-                    <div class="ai-msg assistant">
+                    <div class="ai-msg assistant" id="aiInitialMsg">
                         <div class="ai-msg-bubble">
-                            <p>Hi! I'm Ayush's portfolio assistant powered by local AI. Ask me about projects, backend skills, education, or let me open demos for you.</p>
+                            <p>${this.isWelcomeSession ? escapeHtml(WELCOME_MESSAGE) : "Hi! I'm Ayush's portfolio assistant powered by local AI. Ask me about projects, backend skills, education, or let me open demos for you."}</p>
                         </div>
                     </div>
                 </div>
@@ -504,6 +524,14 @@
                 e.preventDefault();
                 this.handleSubmit();
             });
+
+            // Typing interrupts welcome speech (Step 8)
+            this.inputField.addEventListener("input", () => {
+                if (this.voiceOutput && this.voiceOutput.isSpeaking()) {
+                    this.voiceOutput.stopSpeaking();
+                }
+                this.removeWelcomePrompt();
+            });
         }
 
         togglePanel() {
@@ -521,6 +549,12 @@
             this.triggerBtn.setAttribute("aria-expanded", "true");
             setTimeout(() => this.inputField.focus(), 150);
             this.scrollToBottom();
+
+            // Welcome experience on first panel open (Step 8)
+            if (this.isWelcomeSession && !this.welcomeTriggered) {
+                this.welcomeTriggered = true;
+                this.triggerWelcome();
+            }
         }
 
         closePanel() {
@@ -530,6 +564,7 @@
             if (this.voiceOutput) {
                 this.voiceOutput.stopSpeaking();
             }
+            this.removeWelcomePrompt();
             this.isOpen = false;
             this.panel.classList.remove("is-open");
             this.triggerBtn.classList.remove("is-active");
@@ -950,6 +985,92 @@
             }
         }
 
+        // Welcome Experience Methods (Step 8)
+        triggerWelcome() {
+            if (!this.voiceOutput || !this.voiceOutput.isSupported) {
+                // Speech synthesis unavailable — show text only, mark seen
+                markWelcomeSeen();
+                return;
+            }
+
+            // Attempt to speak the welcome using existing VoiceOutputController
+            const spoke = this.voiceOutput.speak(WELCOME_MESSAGE);
+            if (!spoke) {
+                // speak() returned false — show manual start prompt
+                this.showWelcomeStartPrompt();
+                return;
+            }
+
+            // Detect autoplay block: if onstart doesn't fire within 1s, show manual prompt
+            let speechStarted = false;
+            const utt = this.voiceOutput.currentUtterance;
+            if (utt) {
+                const origOnStart = utt.onstart;
+                utt.onstart = (ev) => {
+                    speechStarted = true;
+                    markWelcomeSeen();
+                    this.removeWelcomePrompt();
+                    if (origOnStart) origOnStart.call(utt, ev);
+                };
+
+                const origOnError = utt.onerror;
+                utt.onerror = (ev) => {
+                    if (!speechStarted) {
+                        this.showWelcomeStartPrompt();
+                    }
+                    if (origOnError) origOnError.call(utt, ev);
+                };
+            }
+
+            setTimeout(() => {
+                if (!speechStarted && !isWelcomeSeen()) {
+                    this.voiceOutput.stopSpeaking();
+                    this.showWelcomeStartPrompt();
+                }
+            }, 1000);
+        }
+
+        showWelcomeStartPrompt() {
+            // Don't show if already present or already seen
+            if (this.panel.querySelector("#aiWelcomePrompt")) return;
+
+            const promptEl = document.createElement("div");
+            promptEl.className = "ai-welcome-prompt";
+            promptEl.id = "aiWelcomePrompt";
+            promptEl.setAttribute("role", "status");
+            promptEl.innerHTML = `
+                <span class="ai-welcome-prompt-text">Meet your AI guide</span>
+                <button type="button" class="ai-welcome-start-btn" id="aiWelcomeStartBtn" aria-label="Start welcome greeting">
+                    \uD83D\uDD0A Start
+                </button>
+            `;
+
+            const startBtn = promptEl.querySelector(".ai-welcome-start-btn");
+            startBtn.addEventListener("click", () => {
+                this.voiceOutput.speak(WELCOME_MESSAGE);
+                markWelcomeSeen();
+                this.removeWelcomePrompt();
+            });
+
+            // Insert after the initial message
+            const initialMsg = this.messagesWrap.querySelector("#aiInitialMsg");
+            if (initialMsg && initialMsg.nextSibling) {
+                initialMsg.parentNode.insertBefore(promptEl, initialMsg.nextSibling);
+            } else if (initialMsg) {
+                this.messagesWrap.appendChild(promptEl);
+            } else {
+                this.messagesWrap.appendChild(promptEl);
+            }
+            this.scrollToBottom();
+        }
+
+        removeWelcomePrompt() {
+            const prompt = this.panel.querySelector("#aiWelcomePrompt");
+            if (prompt && prompt.parentNode) {
+                prompt.parentNode.removeChild(prompt);
+            }
+        }
+
         speak(text) {
             if (this.voiceOutput) {
                 return this.voiceOutput.speak(text);
@@ -989,7 +1110,11 @@
             normalizeUrl,
             escapeHtml,
             formatAssistantMessage,
-            ROUTE_MAP
+            ROUTE_MAP,
+            WELCOME_MESSAGE,
+            WELCOME_SESSION_KEY,
+            isWelcomeSeen,
+            markWelcomeSeen
         };
     }
 
